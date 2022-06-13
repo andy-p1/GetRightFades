@@ -155,10 +155,84 @@ a {
     background: var(--color-accent);
 }
 
+/* Collapsibles */
+.collapsible__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__heading {
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__chevron {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+}
+
+/* Blocks */
+
+.block {
+    --padding-vertical: 5rem;
+    padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.block__heading {
+    margin-top: 0;
+}
+
+.block--dark {
+    background: #000;
+    color: #7b858b;
+}
+
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+    color: #fff;
+}
+
+.block--skewed-right {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+}
+
+.block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 /* Navigation Bar */
 
 .nav {
-    background: #fff;
+    background: var(--color-body);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -181,12 +255,12 @@ a {
 }
 
 .nav__item > a {
-    color: #ff0000;
+    color: var(--color-headings);
     transition: color 0.3s;
 }
 
 .nav__item > a:hover {
-    color: #fff;
+    color: var(--color-accent);
 }
 
 .nav__toggler {
@@ -197,14 +271,14 @@ a {
 
 .nav.collapsible--expanded .nav__toggler {
     opacity: 1;
-    box-shadow: 0 0 0 3px #000;
+    box-shadow: 0 0 0 3px #222;
     border-radius: 5px;
 }
 
 .nav__logo {
     transform: translateY(5px);
     width: 150px;
-    font-family: 'Bilbo Swash Caps', cursive;
+    /* font-family: 'Bilbo Swash Caps', cursive; */
 }
 
 @media screen and (min-width: 768px) {
