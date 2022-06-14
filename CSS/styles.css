@@ -18,14 +18,14 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Typography */
 
 html {
-  /* 62.5% of 16px = 10px */
-  font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
 }
 
 body {
@@ -59,6 +59,19 @@ h3 {
 
 p {
     margin-top: 0;
+}
+
+.icon--btn {
+    --hover: var(--color-primary);
+    -webkit-transition: 0.25;
+    background-color: var(--color-headings);
+    border-radius: 50%;
+    border: 2px solid;
+    color: var(--color-primary);
+    line-height: 0;
+    transition: 0.25s;
+    padding: .2rem .2rem;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 1024px) {
@@ -108,6 +121,23 @@ a {
     }
 }
 
+/* button{
+    background: none;
+    border: 2px solid ;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+button{
+    color: var(--color-headings);
+    -webkit-transition: 0.25;
+    transition: 0.25s;
+}
+button:hover, button:focus{
+    border-color: var(--color-primary);
+    color: #fff;
+} */
+
 /* Lists */
 
 .list {
@@ -146,6 +176,14 @@ a {
 .icon--white {
     fill: #fff;
 } /* does this mess with navbar? */
+
+
+.icon--btn:hover,
+.icon--btn:focus {
+    -webkit-animation: pulse 1s;
+    animation:pulse 1s;
+    box-shadow: 0 0 0 2em rgba(255,255,255,0);
+}
 
 .icon-container {
     background: #f3f9fa;
@@ -225,6 +263,24 @@ a {
     max-width: 1140px;
     margin: 0 auto;
   }
+
+/* Grids */ 
+.grid {
+    display: grid;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .grid--1x2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .grid--1x3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
   
 /* Navigation Bar */
 
@@ -348,8 +404,13 @@ a {
     .footer {
       font-size: 1.5rem;
     }
+
     .footer__sections {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .icon--btn {
+        display: none;
     }
   
     .footer .collapsible__arrow {
