@@ -142,8 +142,9 @@ a {
     fill: var(--color-primary);
 }
 
-.icon--accent {
-    fill: var(--color-secondary);
+/*.icon--accent*/ 
+.icon--white {
+    fill: #fff;
 } /* does this mess with navbar? */
 
 .icon-container {
