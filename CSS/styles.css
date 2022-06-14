@@ -194,6 +194,7 @@ a {
 }
 
 /* Blocks */
+
 .block {
     --padding-vertical: 5rem;
     padding: var(--padding-vertical) 2rem;
@@ -216,19 +217,9 @@ a {
   .block--dark h1,
   .block--dark h2,
   .block--dark h3 {
-    color: #fff;
+    color: var(--color-headings);
   }
-  
-  .block--skewed-right {
-    padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
-  }
-  
-  .block--skewed-left {
-    padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
-  }
-  
+
   .container {
     max-width: 1140px;
     margin: 0 auto;
