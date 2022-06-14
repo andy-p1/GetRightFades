@@ -143,8 +143,8 @@ a {
 }
 
 .icon--accent {
-    fill: var(--color-accent);
-}
+    fill: var(--color-secondary);
+} /* does this mess with navbar? */
 
 .icon-container {
     background: #f3f9fa;
@@ -172,7 +172,7 @@ a {
     font-size: 3rem;
 }
 
-.collapsible__chevron {
+.collapsible__arrow {
     transform: rotate(-90deg);
     transition: transform 0.3s;
 }
@@ -184,7 +184,7 @@ a {
     transition: all 0.3s;
 }
 
-.collapsible--expanded .collapsible__chevron {
+.collapsible--expanded .collapsible__arrow {
     transform: rotate(0);
 }  
 
@@ -351,7 +351,7 @@ a {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
   
-    .footer .collapsible__chevron {
+    .footer .collapsible__arrow {
       display: none;
     }
   
