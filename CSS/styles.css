@@ -142,8 +142,8 @@ a {
     fill: var(--color-primary);
 }
 
-.icon--black {
-    fill: #000;
+.icon--accent {
+    fill: var(--color-accent);
 }
 
 .icon-container {
@@ -201,6 +201,7 @@ a {
 }
 
 .nav__item {
+    text-align: center;
     padding: 0.5rem 2rem;
     border-bottom: 1px solid #222;
 }
@@ -226,7 +227,7 @@ a {
 
 .nav.collapsible--expanded .nav__toggler {
     opacity: 1;
-    box-shadow: 0 0 0 3px #222;
+    box-shadow: 0 0 0 3px var(--color-accent);
     border-radius: 5px;
 }
 
